@@ -55,11 +55,11 @@ int main(){
 int choice, item;
 while(1){
 printf("circular queue \n");
-printf("1,enqueue \n");
-printf("2,dequeue  \n");
-printf("3,display  \n");
-printf("4,peek  \n");
-printf("5,exit \n");
+printf("1 enqueue \n");
+printf("2 dequeue  \n");
+printf("3 display  \n");
+printf("4 peek  \n");
+printf("5 exit \n");
 printf("Enter choice: ");
 scanf("%d",&choice);
 switch(choice){
