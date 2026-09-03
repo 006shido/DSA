@@ -7,7 +7,7 @@ void enqueue(int item)
 {
 if ((rear+1)%MAX==front)
 {
-printf("Queue Overflow");
+printf("Queue Overflow \n");
 return;
 }
 if(front==-1)
@@ -18,12 +18,12 @@ else{
 rear=(rear+1)%MAX;
 }
 queue[rear]=item;
-printf("%d inserted into the queue",item);}
+printf("%d inserted into the queue \n",item);}
 void dequeue(){
 int item;
 if(front==-1)
 {
-printf("Queue Underflow");
+printf("Queue Underflow \n");
 return; }
 item=queue[front];
 if(front==rear){
@@ -31,21 +31,23 @@ front=-1;
 rear=-1;}
 else{
 front=(front+1)%MAX;}
-printf("%d deleted from the queue",item);}
+printf("%d deleted from the queue \n",item);}
 void display(){
 int i;
 if(front == -1){
-printf("Queue is empty");
+printf("Queue is empty \n");
 return;}
 printf("circular Queue: ");
 i=front;
 while(i !=rear){
-printf("%d",queue[i]);
+printf("%d ",queue[i]);
 i=(i+1)%MAX;}
-printf("%d",queue[rear]);}
+printf("%d",queue[rear]);
+printf("\n");
+}
 void peek(){
 if(front==-1){
-printf("Queue is empty");
+printf("Queue is empty \n");
 return;}
 printf("front element=%d \n",queue[front]);}
 
@@ -53,11 +55,11 @@ int main(){
 int choice, item;
 while(1){
 printf("circular queue \n");
-printf("1 enqueue \n");
-printf("2 dequeue  \n");
-printf("3 display  \n");
-printf("4 peek  \n");
-printf("5 exit \n");
+printf("1,enqueue \n");
+printf("2,dequeue  \n");
+printf("3,display  \n");
+printf("4,peek  \n");
+printf("5,exit \n");
 printf("Enter choice: ");
 scanf("%d",&choice);
 switch(choice){
@@ -78,6 +80,6 @@ break;
 case 5:
 return 0;
 default:
-printf("invalid choice");
+printf("invalid choice \n");
 }}
 return 0;}
